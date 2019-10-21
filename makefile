@@ -1,17 +1,17 @@
 default: main.o Datum.o myLList.o
-	g++ -g main.o Datum.o myLList.o
+	g++ -g build/main.o build/Datum.o build/myLList.o
 
-Datum.o: Datum.h Datum.cpp
-	g++ -c -g Datum.cpp
+Datum.o: src/Datum.cpp include/Datum.h
+	g++ -c -g src/Datum.cpp -o build/Datum.o
 
-myLList.o: myLList.h myLList.cpp
-	g++ -c -g myLList.cpp
+myLList.o: src/myLList.cpp include/myLList.h 
+	g++ -c -g src/myLList.cpp -o build/myLList.o
 	
-main.o: main.cpp Datum.h
-	g++ -c -g main.cpp
+main.o: src/main.cpp include/Datum.h
+	g++ -c -g src/main.cpp -o build/main.o
 
 clean: 
-	rm -f a.out *.o
+	rm -f a.out build/*.o
 
 backup:
-	tar cvf backup.tar *cpp *h makefile
+	tar -cvf backup.tar src/*cpp include/*h makefile
