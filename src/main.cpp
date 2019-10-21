@@ -1,5 +1,6 @@
 #include <iostream>
-#include "myLList.h"
+#include "../include/myLList.h"
+
 using namespace std;
 
 int main(int argc, char const *argv[])
