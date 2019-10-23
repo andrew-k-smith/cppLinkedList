@@ -6,4 +6,4 @@ in directory,
 
 "make clean" will remove "a.out" and all ".o" files in the "build" diretory
 
-"make backup" will make a backup of files in "src" and "include" directories, along with "README.md", and ".gitignore"
+"make backup" will make a backup of files in "src" and "include" directories, along with "README.md", "makefile", and ".gitignore"
