@@ -18,9 +18,9 @@ public:
     //Destructor
     ~Datum();
     //Getters and Setters
-    float getData();
+    float getData() const;
     void setData(float);
-    Datum *getNext();
+    Datum *getNext() const;
     void setNext(Datum &);
 
 private:
