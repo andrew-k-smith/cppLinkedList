@@ -1,3 +1,9 @@
+/*
+ * file: myLList.h
+ * author: Andrew Smith
+ * 
+ * header file for myLList
+ */
 #ifndef MYLLIST_H
 #define MYLLIST_H
 
@@ -12,18 +18,21 @@ public:
     myLList(int, float *anArray);
     myLList(const myLList &);
     ~myLList();
-    void operator+(const myLList &);
-    void operator=(const myLList &); 
-    Datum operator[](int);
-    bool operator==(const myLList &); 
+    const myLList operator+(const myLList &) const;
+    const myLList operator=(const myLList &);
+    const Datum operator[](int) const;
+    bool operator==(const myLList &) const;
     void add(float aData);
     void insert(float, int);
     void remove(int index);
-    void print();
+    void print() const;
     Datum *find(float aData);
-    Datum *getHead();
-    Datum *getTail();
-    int getSize();
+    Datum *getHead() const;
+    Datum *getTail() const;
+    int getSize() const;
+    void setHead(Datum *);
+    void setTail(Datum *);
+    void setSize(int);
 
 private:
     Datum *head;

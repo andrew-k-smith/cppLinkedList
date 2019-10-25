@@ -1,3 +1,9 @@
+/*
+ * file: Datum.h
+ * author: Andrew Smith
+ * 
+ * header file for Datum
+ */
 #ifndef DATUM_H
 #define DATUM_H
 
@@ -21,7 +27,7 @@ public:
     float getData() const;
     void setData(float);
     Datum *getNext() const;
-    void setNext(Datum &);
+    void setNext(Datum *);
 
 private:
     float data;

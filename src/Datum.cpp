@@ -1,35 +1,48 @@
+/*
+ * file: Datum.cpp
+ * author: Andrew Smith
+ * 
+ * src file for Datum
+ */
 #include "../include/Datum.h"
-
-Datum::Datum(){
-    //What does this mean
-
+//Default constructor
+Datum::Datum()
+{
+    data = 0;
+    setNext(NULL);
 }
+//Alternate constructor
 Datum::Datum(float aData)
 {
-    next = NULL;
     setData(aData);
+    setNext(NULL);
 }
+//Copy constructor
 Datum::Datum(const Datum &Datum)
 {
-    data = Datum.getData();
-    next = Datum.getNext();
+    setData(Datum.getData());
+    setNext(Datum.getNext());
 }
+//Destructor
 Datum::~Datum()
 {
-    //Don't need because never use new keyword
 }
+//Returns private member variable next
 Datum *Datum::getNext() const
 {
     return next;
 }
-void Datum::setNext(Datum &aNext)
+//Set private member variable next
+void Datum::setNext(Datum *aNext)
 {
-    next = &aNext;
+    next = aNext;
 }
+//Return private member variable data
 float Datum::getData() const
 {
     return data;
 }
+//set private member variable data
 void Datum::setData(float aData)
 {
     //check for valid data
