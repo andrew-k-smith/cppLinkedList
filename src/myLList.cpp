@@ -164,11 +164,10 @@ void myLList::insert(float aData, int index)
 {
     if (index < 0 || index >= size)
         exit(1);
-    cout << "Inserting datum at index: " << index << " with value: " << aData << endl;
     //To iterate through LL
     Datum *temp = head;
     //Iterate to Datum that points to index
-    for (int i = 0; i < index - 1; i++)
+    for (int i = 0; i < index-1; i++)
     {
         temp = temp->getNext();
     }
@@ -186,7 +185,6 @@ void myLList::remove(int index)
 {
     if (index < 0 || index >= size)
         exit(1);
-    cout << "Removing datum at index: " << index << endl;
     //To iterate through LL
     Datum *temp = head;
     //Iterate to Datum that points to index
