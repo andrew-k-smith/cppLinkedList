@@ -14,4 +14,4 @@ clean:
 	rm -f a.out build/*.o
 
 backup:
-	tar -cvf backup.tar src/*cpp include/*h makefile
+	tar -cvf backup.tar src/*cpp include/*h makefile build README.md
